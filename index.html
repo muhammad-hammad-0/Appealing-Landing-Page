@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family:"gilroy" ;
+        }
+
+        html,body{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .main{
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .left{
+            width: 37%;
+            height: 100%;
+            background-color: white;
+        }
+
+        .left header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 10px;
+            height: 80px;
+        }
+
+        .left nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            flex-grow: 1;
+            padding: 0 20px;
+        }
+
+        .left nav ul{
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .left nav a{
+            text-decoration: none;
+            color: black;
+            display: flex;
+            align-items: center;
+        }
+
+        .left nav a:hover{
+            text-decoration: underline ;
+            text-decoration-thickness: 3px;
+            text-decoration-color: blue;
+        }
+
+        .text-left{
+            display: flex;
+            flex-direction: column;
+            height: 500px;
+            width: 60%;
+            gap: 25px;
+            margin:auto;
+            line-height: 25px;
+            text-align: justify;
+            justify-content: center;
+        }
+
+        .text-left .read{
+            cursor: pointer;
+        }
+
+        .text-left .read:hover{
+            text-decoration: underline ;
+            text-decoration-thickness: 3px;
+            text-decoration-color: blue;
+        }
+
+        .right{
+            width: 63%;
+            height: 100%;
+            background-color: green;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .rtop{
+            height: 50%;
+            width: 100%;
+            background-color: grey;
+            display: flex;
+        }
+
+        .rtleft{
+            width: 50%;
+            height: 100%;
+            background: url("cactus.jpg");
+            background-position: center;
+            background-size: cover;
+            
+        }
+
+        .rtright{
+            width: 50%;
+            height: 100%;
+            background: url("lemon.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .rbottom{
+            position: relative;
+            width: 100%;
+            height: 50%;
+            background: url("rb.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .mover{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            background-color: white;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 38px;
+            width: 70px;
+        }
+
+        @media(max-width: 500){
+            .main{
+            flex-direction: column;
+            }
+            /* .main .left{
+                width: 100%;
+            }
+            .main .right{
+                width: 100%;
+            } */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <header>
+                <nav>
+                  <i class="ri-arrow-left-line"></i>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Work</a></li>
+                    </ul>
+                    <a href="https:\\www.x.com" target="_blank"><img src="x.png" width="28px" alt="Your Image"></a>
+                </nav>
+            </header>
+
+            <main>
+                <div class="text-left">
+                    <h1>Hello,</h1>
+                    <p >How it is looking? i hope it will look better when you will add actual text instead of this dummy one!</p>
+                    <div class="read">Read</div>
+                </div>
+            </main>
+        </div>
+
+        <div class="right">
+            <div class="rtop">
+                <div class="rtleft">
+                </div>
+                <div class="rtright">
+                </div>
+            </div>
+            <div class="rbottom">
+                <div class="mover">
+                    <i class="ri-arrow-left-s-line"></i>
+                    <i class="ri-arrow-right-s-line"></i>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
